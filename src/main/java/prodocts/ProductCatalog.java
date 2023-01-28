@@ -10,6 +10,8 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.xml.ws.WebServiceProvider;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @WebService(endpointInterface = "service.ProductCatalogService"
@@ -23,6 +25,10 @@ public class ProductCatalog implements ProductCatalogService {
     public ProductCatalog() {
     }
 
+    @WebMethod(exclude = true)
+    public List<String> excludeWebService() {
+        return Arrays.asList("Hello", "world");
+    }
     @Override
     @WebMethod
     public List<String> getProductCategories(){
