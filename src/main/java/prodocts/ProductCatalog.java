@@ -36,7 +36,8 @@ public class ProductCatalog implements ProductCatalogService {
         return Arrays.asList("Hello", "world");
     }
     @Override
-    @WebMethod
+    @WebMethod(action = "fetch_product_categories",
+               operationName = "fetchProductCategories")
     public List<String> getProductCategories(){
         System.out.println("getProductCategories");
         return productService.getProductCategories();
