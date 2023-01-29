@@ -13,10 +13,16 @@ import javax.xml.ws.WebServiceProvider;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+/*
 @WebService(endpointInterface = "service.ProductCatalogService"
         ,portName = "TestMartCatalogPort"
         ,serviceName = "myProductService")
+
+ */
+@WebService(name="NAME",
+            portName = "portNameTest",
+            serviceName = "serviceNameTest",
+            targetNamespace = "www.hicode.net")
 public class ProductCatalog implements ProductCatalogService {
 
     ProductServiceImpl productService = new ProductServiceImpl();

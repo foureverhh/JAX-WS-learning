@@ -6,7 +6,7 @@ import model.Product;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
-@WebService(name="TestMartCatalog",targetNamespace = "www.hicode.net")
+@WebService//(name="TestMartCatalog",targetNamespace = "www.hicode.net")
 public interface ProductCatalogService {
     @WebMethod(action = "fetch_categories", operationName = "fetchCategories")
     List<String> getProductCategories();
