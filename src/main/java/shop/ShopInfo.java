@@ -11,7 +11,7 @@ import javax.xml.ws.BindingType;
 
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
-//@SOAPBinding(style = SOAPBinding.Style.RPC)
+// @SOAPBinding(style = SOAPBinding.Style.RPC)
 // @BindingType(javax.xml.ws.soap.SOAPBinding.SOAP12HTTP_BINDING)
 public class ShopInfo {
    /*
@@ -35,7 +35,8 @@ public class ShopInfo {
 
     */
     @WebMethod
-    public String getShopInfoSample1(String property) {
+    @WebResult(partName = "ShopInfoOutput")
+    public String getShopInfoSample1(@WebParam(partName = "ShopInfoInput") String property) {
         String response = "Invalid property";
         if("shopName".equals(property))
             response = "shopName";
