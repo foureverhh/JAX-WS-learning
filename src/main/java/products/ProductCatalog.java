@@ -1,4 +1,4 @@
-package prodocts;
+package products;
 
 import model.Book;
 import model.Product;
@@ -8,9 +8,7 @@ import service.impl.ProductServiceImpl;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
-import javax.xml.ws.WebServiceProvider;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 /*

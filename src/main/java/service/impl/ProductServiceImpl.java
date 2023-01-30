@@ -1,5 +1,6 @@
 package service.impl;
 
+import model.MyProduct;
 import model.Product;
 
 import java.util.ArrayList;
@@ -60,5 +61,20 @@ public class ProductServiceImpl {
         products.add(new Product("Java Brains Book","1234",9999.99));
         products.add(new Product("Another Book","ABC",12.50));
         return products;
+    }
+
+    public List<MyProduct> getMyProducts(String category) {
+
+        List<MyProduct> books = new ArrayList<>();
+        books.add(new MyProduct("Java","123",1));
+        books.add(new MyProduct("C#","234",2));
+        books.add(new MyProduct("JavaScript","456",3));
+        books.add(new MyProduct("TypeScript","567",4));
+        switch (category) {
+            case "books":
+                return books;
+            default:
+                return new ArrayList<>();
+        }
     }
 }

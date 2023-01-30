@@ -1,6 +1,4 @@
-package prodocts;
-
-import prodocts.ProductCatalog;
+package products;
 
 import javax.xml.ws.Endpoint;
 
