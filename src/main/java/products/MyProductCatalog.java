@@ -7,7 +7,10 @@ import javax.jws.WebService;
 import java.util.List;
 
 
-@WebService(endpointInterface = "products.MyProductCatalogInterface")
+@WebService(
+        portName = "portNameTest",
+        serviceName = "MyProductsService",
+        endpointInterface = "products.MyProductCatalogInterface")
 public class MyProductCatalog implements MyProductCatalogInterface {
 
     ProductServiceImpl productService = new ProductServiceImpl();

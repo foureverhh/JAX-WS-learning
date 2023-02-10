@@ -6,9 +6,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import java.util.List;
 @WebService(name="portTypeName",
-        portName = "portNameTest",
-        serviceName = "MyProductsService",
-        targetNamespace = "www.hicode.net")
+            targetNamespace = "www.hicode.net")
 public interface MyProductCatalogInterface {
     @WebMethod(action = "fetch_product_categories",
             operationName = "fetchProductCategories")
