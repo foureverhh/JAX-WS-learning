@@ -3,6 +3,7 @@ package products;
 import model.MyProduct;
 
 import javax.jws.WebMethod;
+import javax.jws.WebResult;
 import javax.jws.WebService;
 import java.util.List;
 @WebService(name="portTypeName",
@@ -19,5 +20,6 @@ public interface MyProductCatalogInterface {
     boolean addProduct(String category, String product);
 
     @WebMethod
+    @WebResult(name = "MyProducts")
     List<MyProduct> getMyProducts(String category);
 }

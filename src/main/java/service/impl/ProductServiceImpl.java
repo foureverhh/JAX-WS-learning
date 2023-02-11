@@ -70,11 +70,9 @@ public class ProductServiceImpl {
         books.add(new MyProduct("C#","234",2));
         books.add(new MyProduct("JavaScript","456",3));
         books.add(new MyProduct("TypeScript","567",4));
-        switch (category) {
-            case "books":
-                return books;
-            default:
-                return new ArrayList<>();
+        if (category.equalsIgnoreCase("books")) {
+            return books;
         }
+        return new ArrayList<>();
     }
 }

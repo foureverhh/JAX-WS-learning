@@ -1,5 +1,11 @@
 package model;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+
+@XmlRootElement(name = "Product")
+@XmlType(propOrder = {"price", "sku", "name"})
 public class MyProduct {
     private String name;
     private String sku;
@@ -13,7 +19,7 @@ public class MyProduct {
         this.sku = sku;
         this.price = price;
     }
-
+    @XmlElement(name="productName")
     public String getName() {
         return name;
     }
@@ -29,7 +35,7 @@ public class MyProduct {
     public void setSku(String sku) {
         this.sku = sku;
     }
-
+    @XmlElement(defaultValue = "1.0", name = "purchasePrice")
     public double getPrice() {
         return price;
     }
